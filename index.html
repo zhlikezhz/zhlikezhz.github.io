@@ -167,11 +167,11 @@
 
       <div class="body-wrap">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-搭建Jenkins" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/11/hello-world/" class="article-date">
-  	<time datetime="2017-07-11T10:27:57.022Z" itemprop="datePublished">2017-07-11</time>
+      <a href="/2017/07/28/搭建Jenkins/" class="article-date">
+  	<time datetime="2017-07-28T05:34:44.880Z" itemprop="datePublished">2017-07-28</time>
 </a>
     </div>
   
@@ -180,28 +180,36 @@
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="Jenkins构建"><a href="#Jenkins构建" class="headerlink" title="Jenkins构建"></a>Jenkins构建</h1><h2 id="安装Jenkins"><a href="#安装Jenkins" class="headerlink" title="安装Jenkins"></a>安装Jenkins</h2><p>在Mac下可以直接通过brew来安装Jenkins。</p>
+<ul>
+<li>brew install jenkins</li>
+</ul>
+<h2 id="启动Jenkins"><a href="#启动Jenkins" class="headerlink" title="启动Jenkins"></a>启动Jenkins</h2><p>mac下使用brew services 来启动jenkins，使用launchctl设置开机启动Jenkins。</p>
+<ul>
+<li>brew services jenkins start：启动</li>
+<li>launchctl load -w /Library/LaunchDaemons/org.jenkins-ci.plist：设置开机启动</li>
+</ul>
+<p>注意：Jenkins的开机启动配置文件/Library/LaunchDaemons/org.jenkins-ci.plist中，有一些值得注意的字段。</p>
+<ul>
+<li>UserName字段：设置启动Jenkins的用户。</li>
+<li>JENKINS_HOME字段：指定Jenkins的项目目录，所有Jenkins的配置和项目被存放在此处。<br>一般情况下默认启动用户为Jenkins，其他用户没有权限写Jenkins的项目目录，这时就需要手动配置了。</li>
+</ul>
+<h2 id="关闭Jenkins"><a href="#关闭Jenkins" class="headerlink" title="关闭Jenkins"></a>关闭Jenkins</h2><p>mac下使用brew services 来关闭jenkins，使用launchctl取消开机启动Jenkins。</p>
+<ul>
+<li>brew services jenkins stop：关闭</li>
+<li>launchctl unload -w /Library/LaunchDaemons/org.jenkins-ci.plist：取消开机启动</li>
+</ul>
+<h2 id="创建Jenkins-Job"><a href="#创建Jenkins-Job" class="headerlink" title="创建Jenkins Job"></a>创建Jenkins Job</h2><p>启动Jenkins后，可以浏览器中输入<a href="http://localhost:8080/直接进入Jenkins工程界面，首页中能直接新建Job。" target="_blank" rel="external">http://localhost:8080/直接进入Jenkins工程界面，首页中能直接新建Job。</a></p>
+<h2 id="拷贝Jenkins-Job"><a href="#拷贝Jenkins-Job" class="headerlink" title="拷贝Jenkins Job"></a>拷贝Jenkins Job</h2><p>将一台机器上Jenkins的Job拷贝到另外一条机器上Jenkins中，一般有三种办法。</p>
+<ol>
+<li>拷贝Job目录。</li>
+<li>利用Jenkins插件<a href="https://wiki.jenkins-ci.org/display/JENKINS/Job+Import+Plugin" target="_blank" rel="external">Jon Import Plugin</a></li>
+<li>利用Jenkins命令工具Jenkins CLI去获得指定Job的XML文件，然后通过Jenkins CLI安装到另外一个Jenkins上。</li>
+</ol>
+<h2 id="外网访问"><a href="#外网访问" class="headerlink" title="外网访问"></a>外网访问</h2><p>vim /usr/local/opt/jenkins/homebrew.mxcl.jenkins.plist修改<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>--httpListenAddress=0.0.0.0<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>默认为0.0.0.0，如果为127.0.0.1只能通过127.0.0.1:8080才能访问</p>
 
       
     </div>
