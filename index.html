@@ -253,7 +253,7 @@
 </ul>
 <h2 id="启动Jenkins"><a href="#启动Jenkins" class="headerlink" title="启动Jenkins"></a>启动Jenkins</h2><p>mac下使用brew services 来启动jenkins，使用launchctl设置开机启动Jenkins。</p>
 <ul>
-<li>brew services jenkins start：启动</li>
+<li>brew services start jenkins：启动</li>
 <li>launchctl load -w /Library/LaunchDaemons/org.jenkins-ci.plist：设置开机启动</li>
 </ul>
 <p>注意：Jenkins的开机启动配置文件/Library/LaunchDaemons/org.jenkins-ci.plist中，有一些值得注意的字段。</p>
@@ -263,7 +263,7 @@
 </ul>
 <h2 id="关闭Jenkins"><a href="#关闭Jenkins" class="headerlink" title="关闭Jenkins"></a>关闭Jenkins</h2><p>mac下使用brew services 来关闭jenkins，使用launchctl取消开机启动Jenkins。</p>
 <ul>
-<li>brew services jenkins stop：关闭</li>
+<li>brew services stop jenkins：关闭</li>
 <li>launchctl unload -w /Library/LaunchDaemons/org.jenkins-ci.plist：取消开机启动</li>
 </ul>
 <h2 id="创建Jenkins-Job"><a href="#创建Jenkins-Job" class="headerlink" title="创建Jenkins Job"></a>创建Jenkins Job</h2><p>启动Jenkins后，可以浏览器中输入<a href="http://localhost:8080/直接进入Jenkins工程界面，首页中能直接新建Job。" target="_blank" rel="external">http://localhost:8080/直接进入Jenkins工程界面，首页中能直接新建Job。</a></p>
