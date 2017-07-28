@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Zouhao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="UGUI之事件系统UGUI事件系统主要负责将输入事件发送给对象，例如：将用户的键盘、鼠标、触摸等事件分发给对象。 它主要由三部分组成：  EventSystem：主要负责处理输入、射线投射以及发送事件。一个场景中只能有一个EventSystem组件，并且需要BaseInputModule组件的协助才能工作。 BaseInputModule：是一个基础模块，负责发送输入事件（点击、拖拽、选择等）到具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zouhao">
+<meta property="og:url" content="http://yoursite.com/2017/07/28/UGUI 事件系统/index.html">
+<meta property="og:site_name" content="Zouhao">
+<meta property="og:description" content="UGUI之事件系统UGUI事件系统主要负责将输入事件发送给对象，例如：将用户的键盘、鼠标、触摸等事件分发给对象。 它主要由三部分组成：  EventSystem：主要负责处理输入、射线投射以及发送事件。一个场景中只能有一个EventSystem组件，并且需要BaseInputModule组件的协助才能工作。 BaseInputModule：是一个基础模块，负责发送输入事件（点击、拖拽、选择等）到具">
+<meta property="og:updated_time" content="2017-05-25T09:48:37.079Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zouhao">
+<meta name="twitter:description" content="UGUI之事件系统UGUI事件系统主要负责将输入事件发送给对象，例如：将用户的键盘、鼠标、触摸等事件分发给对象。 它主要由三部分组成：  EventSystem：主要负责处理输入、射线投射以及发送事件。一个场景中只能有一个EventSystem组件，并且需要BaseInputModule组件的协助才能工作。 BaseInputModule：是一个基础模块，负责发送输入事件（点击、拖拽、选择等）到具">
+  
+    <link rel="alternative" href="/atom.xml" title="Zouhao" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="../img/girl_friend.png" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Zouhao</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">路漫漫其修远兮，吾将上下而求索。</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+
+					
+
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Zouhao</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img src="../img/girl_friend.png" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Zouhao</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">路漫漫其修远兮，吾将上下而求索。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-UGUI 事件系统" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/07/28/UGUI 事件系统/" class="article-date">
+  	<time datetime="2017-07-28T05:40:08.834Z" itemprop="datePublished">2017-07-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="UGUI之事件系统"><a href="#UGUI之事件系统" class="headerlink" title="UGUI之事件系统"></a>UGUI之事件系统</h1><p>UGUI事件系统主要负责将输入事件发送给对象，例如：将用户的键盘、鼠标、触摸等事件分发给对象。</p>
+<p>它主要由三部分组成：</p>
+<ul>
+<li>EventSystem：主要负责处理输入、射线投射以及发送事件。一个场景中只能有一个EventSystem组件，并且需要BaseInputModule组件的协助才能工作。</li>
+<li>BaseInputModule：是一个基础模块，负责发送输入事件（点击、拖拽、选择等）到具体对象。StandaloneInputModule和TouchInputModule继承自BaseInputModule，分别负责标准输入和触摸输入。我们可以通过继承BaseInputModule来实现自己的输入模块，然后插入到EventSytem中。</li>
+<li>BaseRaycaster：它通过射线投射来确定输入事件所作用的对象。系统中PhysicsRaycaster、Physics2DRaycaster、GraphicRaycaster都继承自BaseRaycaster来确定对象。 Graphic Raycaster用于UI元素，Physics 2D Raycaster用于2D物理元素，Physics Raycaster用于3D物理元素。</li>
+</ul>
+<p>总的来说，EventSystem负责管理，BaseInputModule负责输入，BaseRaycaster负责确定目标对象，目标对象负责处理事件，这样一个完整的事件系统就有了。</p>
+<h2 id="EventSystem组件"><a href="#EventSystem组件" class="headerlink" title="EventSystem组件"></a>EventSystem组件</h2><p>EventSystem组件继承自UIBehavior，负责管理挂载在其下的BaseInputModule，并保存当前被选中的GameObject。在场景中只需要存在一个这样的管理类，如果场景中出现多个EventSystem组件，Unity会给出警告。</p>
+<p>EventSystem每帧激活一个当前平台可用的BaseInputModule类，来处理相应的输入信息，并通知给作用对象。具体的输入信息处理被延迟到BaseInputModule系列类中，具体的作用对象选择被延迟到BaseRaycaster系列类中。而每类事件调用的具体函数在EventExcutes和EventInterfaces中被定义。用户只需要挂接BoxCollider来，并且实现EventInterfaces中定义的相应接口就行了。</p>
+<h2 id="BaseInputModule组件"><a href="#BaseInputModule组件" class="headerlink" title="BaseInputModule组件"></a>BaseInputModule组件</h2><p>BaseInputModule是用户输入的基类，负责处理用户输入，并将输入事件通知给具体的作用对象。BaseInputModule提供虚函数Process来了处理各种输入信息。</p>
+<h2 id="BaseRaycaster组件"><a href="#BaseRaycaster组件" class="headerlink" title="BaseRaycaster组件"></a>BaseRaycaster组件</h2><p>射线投射是用于发送确定指示器结束的位置，对于输入模块，常常使用射线投射在场景配置中计算瞄准装置的结束位置。默认设置中提供3种射线投射：</p>
+<ul>
+<li>Graphic Raycaster 用于UI元素</li>
+<li>Physics 2D Raycaster 用于2D物理元素</li>
+<li>Physics Raycaster 用于3D物理元素<br>如果你有一个2D/3D射线投射配置在你的场景中，将很容易有非UI元素从输入模块中接受消息。只需要添加实现一个事件接口的脚本。</li>
+</ul>
+<h2 id="EventInterfaces-cs文件"><a href="#EventInterfaces-cs文件" class="headerlink" title="EventInterfaces.cs文件"></a>EventInterfaces.cs文件</h2><p>此文件中定义了所有可以响应的用户事件接口，继承实现这些接口就可以处理相应的事件。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">namespace UnityEngine.EventSystems</div><div class="line">&#123;</div><div class="line">    public interface IEventSystemHandler</div><div class="line">    public interface IPointerEnterHandler : IEventSystemHandler</div><div class="line">    public interface IPointerExitHandler : IEventSystemHandler</div><div class="line">    public interface IPointerDownHandler : IEventSystemHandler</div><div class="line">    public interface IPointerUpHandler : IEventSystemHandler</div><div class="line">    public interface IPointerClickHandler : IEventSystemHandler</div><div class="line">    public interface IBeginDragHandler : IEventSystemHandler</div><div class="line">    public interface IInitializePotentialDragHandler : IEventSystemHandler</div><div class="line">    public interface IDragHandler : IEventSystemHandler</div><div class="line">    public interface IEndDragHandler : IEventSystemHandler</div><div class="line">    public interface IDropHandler : IEventSystemHandler</div><div class="line">    public interface IScrollHandler : IEventSystemHandler</div><div class="line">    public interface IUpdateSelectedHandler : IEventSystemHandler</div><div class="line">    public interface ISelectHandler : IEventSystemHandler</div><div class="line">    public interface IDeselectHandler : IEventSystemHandler</div><div class="line">    public interface IMoveHandler : IEventSystemHandler</div><div class="line">    public interface ISubmitHandler : IEventSystemHandler</div><div class="line">    public interface ICancelHandler : IEventSystemHandler</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="EventExcutes类"><a href="#EventExcutes类" class="headerlink" title="EventExcutes类"></a>EventExcutes类</h2><p>EventExcutes是一个静态的委托类，通过来间接的调用gameObject的响应事件函数。</p>
+<h2 id="UntiyEvent类"><a href="#UntiyEvent类" class="headerlink" title="UntiyEvent类"></a>UntiyEvent类</h2><p>UnityEvent类是一个委托类，可以通过他来增加委托。它与C#的delegate区别在于，UnityEvent及其子类可以在Unity编辑器中直接编辑关联，非常方便。</p>
+<p>下面是自定义的事件<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//UnityEvent、UnityEvent&lt;T&gt;、UnityEvent&lt;T, T&gt;、UnityEvent&lt;T, T, T&gt;提供对自定义事件的支持</div><div class="line"></div><div class="line">public class MyIntEvent : UnityEvent&lt;int&gt;</div><div class="line">&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">public class ExampleClass : MonoBehaviour</div><div class="line">&#123;</div><div class="line">    public MyIntEvent m_MyEvent;</div><div class="line">    void Start ()&#123;</div><div class="line">        if (m_MyEvent == null)</div><div class="line">            m_MyEvent = new MyIntEvent();</div><div class="line">        m_MyEvent.AddListener (Ping);</div><div class="line">    &#125;</div><div class="line">    void Update () &#123;</div><div class="line">        if (Input.anyKeyDown &amp;&amp; m_MyEvent != null)&#123;</div><div class="line">            m_MyEvent.Invoke (5);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    void Ping (int i)&#123;</div><div class="line">        Debug.Log ("Ping" + i);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><h3 id="UI穿透"><a href="#UI穿透" class="headerlink" title="UI穿透"></a>UI穿透</h3><p>处理UI穿透时，可以勾选掉CanvasGroup的Blocks Raycasts参数。这样在属于这个CanvasGroup下的所有事件响应都会被忽略。</p>
+<h3 id="响应多个OnDrag"><a href="#响应多个OnDrag" class="headerlink" title="响应多个OnDrag"></a>响应多个OnDrag</h3><p>有时候我们在使用ScrollRect时，想要在其上的Item也去想要OnDrag，但是Unity的EventSystem一次只能选择一个作用对象，这时我们可以找Item的OnDrag中去调用其ScrollRect的OnDrag函数来解决此类问题。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/28/搭建Jenkins/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-center">
+    		&copy; 2017 Zouhao
+    	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
